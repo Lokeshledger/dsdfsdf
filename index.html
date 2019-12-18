@@ -41,7 +41,7 @@
             <blockquote class="text-center">
             <footer class="blockquote-footer text-white">Let's forget taking notes</footer>
             </blockquote>
-        <div class="container-fluid">
+        <div class="container">
                 <div class="jumbotron mt-4">
                         <div class="input-group mb-3">
                             <input
@@ -112,7 +112,7 @@
     let flag=checkAmount();
     if(flag==0)
     {
-        allDelete.innerHTML=`<h6><span class="text-danger font-italic">Invalid Expense</span></h6>`; 
+        allDelete.innerHTML=`<h6><span class="text-danger font-italic">Invalid Expense Input</span></h6>`; 
     }
     else
     {
@@ -172,13 +172,14 @@
     }
     function checkAmount()
     {
-    const amountElement=document.querySelector("#amount");
+    const desc=descElement.value;
     const Amount=amountElement.value;
     const intAmount=parseInt(Amount,10);
-    if(intAmount<=0||isNaN(intAmount))
-    {   return 0;
-        amountElement.setCustomValidity("Invalid Expense Amount");
-    }
+        if(intAmount<=0||isNaN(intAmount)||desc==""||!isNaN(desc))
+        {   
+        return 0;
+        //amountElement.setCustomValidity("Invalid Expense Details");
+        }
     }
     function DeleteAllExpenses()
     {      
