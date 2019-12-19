@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=263201d7ad7d1a2daa1dd58a89b75072"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Expense App</title>
     <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -39,7 +39,7 @@
 
             <br/><h3 class="font-italic text-center text-white">Welcome to <span class="text-danger font-italic">PaperLess !!</span></h3>
             <blockquote class="text-center">
-            <footer class="blockquote-footer text-white">Let's forget taking notes</footer>
+            <footer class="blockquote-footer text-white">Let's forget remembering your expenses</footer>
             </blockquote>
         <div class="container">
                 <div class="jumbotron mt-4">
@@ -175,7 +175,7 @@
     const desc=descElement.value;
     const Amount=amountElement.value;
     const intAmount=parseInt(Amount,10);
-        if(intAmount<=0||isNaN(intAmount)||desc==""||!isNaN(desc))
+        if(intAmount<=0||isNaN(intAmount)||desc==""||!isNaNS(desc))
         {   
         return 0;
         //amountElement.setCustomValidity("Invalid Expense Details");
